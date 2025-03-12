@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+.navbar {
+    @apply flex justify-end items-center gap-5 min-h-16 p-2 shadow-xl -mt-10 z-40;
+}
+
+.left-side {
+    @apply text-lg sticky left-0 top-0 flex h-screen w-3/12 flex-col justify-between border-r border-gray-300 px-3 pt-6 max-md:hidden transition-all ease-in-out duration-500;
+}
+
+.content {
+    @apply flex justify-between sm:w-full md:w-9/12 max-h-screen p-8 z-0;
+}
+
+
+.side-menus {
+    @apply flex flex-col gap-1 mt-14 text-gray-600;
+}
+
+.side-menu {
+    @apply flex flex-row items-center gap-4 px-3 py-2 rounded-md cursor-pointer hover:bg-accent-secondary transition-all duration-300;
+}
+
+
+.nav-menus {
+    @apply flex items-end text-gray-400;
+}
+
+.nav-menu {
+    @apply flex items-end gap-3 px-5 py-1 rounded-md hover:text-gray-500 hover:bg-accent-secondary transition-all duration-300;
+}
+
+
+/* HERO */
+.hero-div {
+    @apply flex flex-col lg:flex-row gap-12 items-center mb-16;
+}
+
+.hero-img img {
+    @apply w-[950px] h-[420px] object-cover rounded-2xl;
+}
+
+.hero-title {
+    @apply w-full;
+}
