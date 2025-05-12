@@ -14,7 +14,7 @@ const CategoryPage = () => {
     useEffect(() => {
         const fetchFoods = async () => {
             try {
-                const res = await fetch(`/data.json/${category}`);
+                const res = await fetch(`/data.json`);
                 const data = await res.json();
                 setFoods(data);
             } catch (error) {
