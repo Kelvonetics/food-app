@@ -1,25 +1,24 @@
 import React from 'react'
 import Sidebar from '../components/Sidebar'
 import Navbar from '../components/Navbar'
-import Hero from '../components/Hero'
+import { Outlet } from 'react-router-dom'
+import { useState } from 'react';
 
 const Index = () => {
+
+  const [showMenu, setShowMenu] = useState(false);
+
   return (
     <main className='relative'>
       <div className="md:mx-4 lg:mx-auto flex justify-between">
         <Sidebar />
 
         <div className="content">
-            <div className="flex flex-col">
-                <Navbar />
+              <Navbar showMenu={showMenu} setShowMenu={setShowMenu} />
 
-                <div className="mt-11 overflow-auto">
-                  <Hero />
-
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus perspiciatis consequuntur temporibus dolorem tempore repellat nam architecto. Explicabo mollitia eius officia molestiae, esse laboriosam quidem illo saepe, sapiente iste consectetur 
-                </div>
-            </div>
-             
+              <div className="mt-6 overflow-auto flex flex-1 flex-col" onClick={() => setShowMenu(false)}>
+                <Outlet />
+              </div>
         </div>
       </div>
     </main>
