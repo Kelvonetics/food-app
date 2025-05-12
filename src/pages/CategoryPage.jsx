@@ -21,7 +21,7 @@ const CategoryPage = () => {
                 console.log(`Error fetch ${category} foods item`, error);
             }
             finally{
-                setLoading(false);
+                setLoading(false);  
             }
         }
         
